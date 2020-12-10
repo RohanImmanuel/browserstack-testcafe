@@ -23,5 +23,11 @@ steps:
     npm i -g testcafe
     npm i -g testcafe-browser-provider-browserstack
     npm install
-    testcafe "browserstack:firefox@74.0:OS X High Sierra" fixtures/single.js
-  displayName: 'npm install and run'
+    displayName: 'npm install'
+
+- task: CmdLine@2
+  inputs:
+    script: 'testcafe "browserstack:firefox@74.0:OS X High Sierra" "fixtures/single.js"' 
+  displayName: "TestCafe Run" 
+
+
