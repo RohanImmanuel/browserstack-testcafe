@@ -18,7 +18,6 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStack Auth'
-    browserstackLocal: true
 
 - script:
     npm i -g testcafe
