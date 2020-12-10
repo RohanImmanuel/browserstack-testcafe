@@ -19,7 +19,8 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStack Auth'
 
-- script: |
+- script:
+    npm i -g testcafe
     npm i -g testcafe-browser-provider-browserstack
     npm install
     testcafe 'browserstack:firefox@74.0:OS X High Sierra' fixtures/single.js
